@@ -1,0 +1,36 @@
+Error with name                                gustavo-adolfo-becquer
+title             Introducción al libro "Rimas y leyendas"
+link     https://ciudadseva.com/texto/00-introduccion-a...
+Name: 1025, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                gustavo-adolfo-becquer
+title                    RIMAS Y LEYENDAS - Libro completo
+link     https://ciudadseva.com/category/libros-complet...
+Name: 1122, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                           ruben-dario
+title          CANTOS DE VIDA Y ESPERANZA - Libro completo
+link     https://ciudadseva.com/category/libros-complet...
+Name: 3909, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                           ruben-dario
+title                     PROSAS PROFANAS - Libro completo
+link     https://ciudadseva.com/category/libros-complet...
+Name: 4013, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                         jose-de-diego
+title                  CANTOS DE REBELDÍA - Libro completo
+link     https://ciudadseva.com/category/libros-complet...
+Name: 4234, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                 federico-garcia-lorca
+title                    ROMANCERO GITANO - Libro completo
+link     https://ciudadseva.com/category/libros-complet...
+Name: 5026, dtype: object
+'NoneType' object has no attribute 'find_all'
+
