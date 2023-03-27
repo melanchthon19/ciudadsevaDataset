@@ -34,3 +34,75 @@ link     https://ciudadseva.com/category/libros-complet...
 Name: 5026, dtype: object
 'NoneType' object has no attribute 'find_all'
 
+Error with name                                            jose-marti
+title                          ISMAELILLO - Libro completo
+link     https://ciudadseva.com/category/libros-complet...
+Name: 7562, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                            jose-marti
+title                    VERSOS SENCILLOS - Libro completo
+link     https://ciudadseva.com/category/libros-complet...
+Name: 7626, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                           john-milton
+title                  EL PARAÍSO PERDIDO - Libro completo
+link     https://ciudadseva.com/category/libros-complet...
+Name: 7865, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                          pablo-neruda
+title                                 Cien sonetos de amor
+link     https://ciudadseva.com/category/libros-complet...
+Name: 8182, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                          pablo-neruda
+title                               Los versos del Capitán
+link     https://ciudadseva.com/category/libros-complet...
+Name: 8183, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                          pablo-neruda
+title                  [Pulse aquí para el libro completo]
+link     https://ciudadseva.com/category/libros-complet...
+Name: 8184, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                          pablo-neruda
+title      Veinte poemas de amor y una canción desesperada
+link     https://ciudadseva.com/category/libros-complet...
+Name: 8185, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                          pablo-neruda
+title                  [Pulse aquí para el libro completo]
+link     https://ciudadseva.com/category/libros-complet...
+Name: 8186, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                jose-gualberto-padilla
+title                       ZOOPOLIGRAFÍA - Libro completo
+link     https://ciudadseva.com/category/libros-complet...
+Name: 8705, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                        arthur-rimbaud
+title        UNA TEMPORADA EN EL INFIERNO - Libro completo
+link     https://ciudadseva.com/category/libros-complet...
+Name: 10330, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                         cesar-vallejo
+title     ESPAÑA, APARTA DE MÍ ESTE CÁLIZ - Libro completo
+link     https://ciudadseva.com/category/libros-complet...
+Name: 11825, dtype: object
+'NoneType' object has no attribute 'find_all'
+
+Error with name                                         cesar-vallejo
+title                              TRILCE - Libro completo
+link     https://ciudadseva.com/category/libros-complet...
+Name: 11927, dtype: object
+'NoneType' object has no attribute 'find_all'
+
