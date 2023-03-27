@@ -66,7 +66,7 @@ def scrape_author_index(index, output):
 def scrape_poems(poems, output):
     df = pd.read_csv(poems)
     print(df.head())
-    #poems = []
+
     for i in df.index:
         print(i)
         try: 
@@ -76,7 +76,6 @@ def scrape_poems(poems, output):
             stanzas = poem.find_all('p')
             
             for j, stanza in enumerate(stanzas):
-                #poems.append([df.loc[i, 'name'], df.loc[i, 'title'], j+1, repr(stanza.text)])
                 with open(output, 'a') as file:
                     file.write(f'{df.loc[i, "name"]},{df.loc[i, "title"]},{j+1},{repr(stanza.text)}\n')
 
@@ -85,22 +84,24 @@ def scrape_poems(poems, output):
                 file.write(f'Error with {df.iloc[i]}\n{e}\n\n')
             print(f'Error with {df.iloc[i]}\n{e}\n\n')
         time.sleep(2)
-
-    #df = pd.DataFrame(poems, columns=['name', 'title', 'stanza', 'text'])
-    #df = df.reset_index()
-    #df = df.drop(['index'], axis=1)
-    #df.to_csv('corpus.csv', index=False)
     
 
 if __name__ == '__main__':
-    # it scrapes ciudad seva's index and outputs a csv file ('ciudadseva.csv')
-    # format: name, link, country, date
+    """
+    it scrapes ciudad seva's index and outputs a csv file ('ciudadseva.csv')
+    format: name, link, country, date
+    """
     #scrape_ciudadseva_index('ciudadseva.csv')
     
-    # it scrapes links to poems from each author and outputs a csv file ('poems.csv')
-    # format: name, title, link
+    """
+    it scrapes links to poems from each author and outputs a csv file ('poems.csv')
+    format: name, title, link
+    """
     #scrape_author_index('ciudadseva.csv', 'poems.csv')
 
-    # it scrapes each poem from each author and outputs a csv file ('corpus.csv')
-    # format: name, title, stanza, text
-    scrape_poems('poems.csv', 'corpus.csv')
+    """
+    it scrapes each poem from each author and outputs a csv file ('corpus.csv')
+    format: name, title, stanza, text
+    any errors are logged to 'log.txt'
+    """
+    #scrape_poems('poems.csv', 'corpus.csv')
