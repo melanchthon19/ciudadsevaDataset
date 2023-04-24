@@ -67,7 +67,7 @@ Given that the dataset is in Spanish, the majority of poems belong to Spanish sp
 
 Most of the poems come from Europe and Latin America (~5,800 poems each). Spain is the country with more poets (85), more poems (3,779), and more tokens (776,423). Within Latin America, Mexico, Puerto Rico, and Argentina account for the first three majorities.
 
-The following plots summarizes the number of authors, poems, and tokens per region, country, and hispanic countries only.
+The following plots summarizes the number of authors, poems, and tokens per region and country.
 
 <img src="https://user-images.githubusercontent.com/61199264/234113284-e9c4c342-de38-4b83-823d-d7081eb354a0.png" 
 width=600 />
