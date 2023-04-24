@@ -1,6 +1,6 @@
 # Spanish Poems Dataset
 
-Dataset of Spanish Poems from [ciudadseva.com](https://ciudadseva.com/biblioteca/indice-autor-poemas/). It comprises a total of 295 authors, and 11,937 poems (more statistics below).
+Dataset of Spanish Poems from [ciudadseva.com](https://ciudadseva.com/biblioteca/indice-autor-poemas/). It comprises a total of 295 authors, and 12,555 poems (more statistics below).
 
 Using BeautifulSoup, [ciudadseva.com](https://ciudadseva.com/biblioteca/indice-autor-poemas/) was scrapped and a poem's corpus was generated.  
 
@@ -59,7 +59,7 @@ manuel-acuna | A Asunción | 3 | Si siente usted un ángel a su lado,
 | Type | Count |
 | --- | --- |
 authors | 295 
-poems | 11,937
+poems | 12,555
 verses | 419,865
 tokens | 2,640,674
 
@@ -69,7 +69,8 @@ Most of the poems come from Europe and Latin America (~5,800 poems each). Spain 
 
 The following plots summarizes the number of authors, poems, and tokens per region, country, and hispanic countries only.
 
-<img src="https://user-images.githubusercontent.com/61199264/234111155-3a55006c-0f3b-4cd7-bd6e-efba1a9473a7.png" width=600 />
+<img src="https://user-images.githubusercontent.com/61199264/234113284-e9c4c342-de38-4b83-823d-d7081eb354a0.png" 
+width=600 />
 <img src="https://user-images.githubusercontent.com/61199264/234111160-13c7921f-0b15-4ef5-a69d-b88e591b9f2a.png" width=600 />
 <img src="https://user-images.githubusercontent.com/61199264/234111146-4f3dae59-4b18-4dca-b785-db4139c78ad8.png" width=600 />
 <img src="https://user-images.githubusercontent.com/61199264/234111157-9ca056fe-10a4-4666-a685-69cdfa8d2dbd.png" width=600 />
