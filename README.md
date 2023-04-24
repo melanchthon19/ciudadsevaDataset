@@ -69,7 +69,11 @@ Most of the poems come from Europe and Latin America (~5,800 poems each). Spain 
 
 The following plots summarizes the number of authors, poems, and tokens per region, country, and hispanic countries only.
 
-<img src="https://user-images.githubusercontent.com/61199264/234109358-54d1cb36-2144-4e1e-83ae-da068150a356.jpg" width=600 />
+<img src="https://user-images.githubusercontent.com/61199264/234111155-3a55006c-0f3b-4cd7-bd6e-efba1a9473a7.png" width=600 />
+<img src="https://user-images.githubusercontent.com/61199264/234111160-13c7921f-0b15-4ef5-a69d-b88e591b9f2a.png" width=600 />
+<img src="https://user-images.githubusercontent.com/61199264/234111146-4f3dae59-4b18-4dca-b785-db4139c78ad8.png" width=600 />
+<img src="https://user-images.githubusercontent.com/61199264/234111157-9ca056fe-10a4-4666-a685-69cdfa8d2dbd.png" width=600 />
+<img src="https://user-images.githubusercontent.com/61199264/234111163-461022da-5490-4b34-ae86-a28004df4036.png" width=600 />
 
 # Libraries
 
