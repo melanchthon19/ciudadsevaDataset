@@ -127,7 +127,7 @@ ggplot(na.omit(dfr), aes(x = region, y = ntitles)) +
 
 dfr <- arrange(dfr, desc(nauthors))
 dfr$region <- factor(dfr$region, levels = dfr$region)
-ggplot(na.omit(dfr), aes(x = region, y = ntitles)) +
+ggplot(na.omit(dfr), aes(x = region, y = nauthors)) +
   geom_bar(stat = "identity", fill = "blue") +
   xlab("Region") +
   ylab("Number of authors") +

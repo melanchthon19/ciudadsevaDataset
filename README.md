@@ -1,6 +1,6 @@
 # Spanish Poems Dataset
 
-Dataset of Spanish Poems from [ciudadseva.com](https://ciudadseva.com/biblioteca/indice-autor-poemas/). It comprises a total of 295 authors, and 12,555 poems (more statistics below).
+Dataset of Spanish Poems from [ciudadseva.com](https://ciudadseva.com/biblioteca/indice-autor-poemas/). It comprises a total of 12,555 poems from 295 authors (45 countries).
 
 Using BeautifulSoup, [ciudadseva.com](https://ciudadseva.com/biblioteca/indice-autor-poemas/) was scrapped and a poem's corpus was generated.  
 
@@ -62,6 +62,8 @@ authors | 295
 poems | 12,555
 verses | 419,865
 tokens | 2,640,674
+countries | 45
+regions | 7
 
 Given that the dataset is in Spanish, the majority of poems belong to Spanish speakers countries. There are, however, considerable translations from other languages, specially of literature's classics.  
 
