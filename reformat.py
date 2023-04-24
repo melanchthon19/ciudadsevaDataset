@@ -23,7 +23,8 @@ for author in authors:
         stats[author]['versos'].append(versos)
 
 # header
-with open('corpus.csv', 'w') as file:
+output = 'corpus.csv'
+with open(output, 'w') as file:
     file.write('author\ttitle\tstanza\tverso\n')
 
 for author in stats.keys():
@@ -35,7 +36,7 @@ for author in stats.keys():
                 continue
             # author, titlepoem, stanza, verso
             print(author, stats[author]['titles'][i], stanza+1, verso)
-            with open('corpusreformat.csv', 'a') as file:
-                file.write(f'{author}\t{stats[author]["titles"][i]}\t{stanza+1}\t{verso}\n')
+            with open(output, 'a') as file:
+                file.write(f'{author}\t{stats[author]["titles"][i][:-4]}\t{stanza+1}\t{verso}\n')
 
 
