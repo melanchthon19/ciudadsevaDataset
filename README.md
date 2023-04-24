@@ -69,7 +69,8 @@ Most of the poems come from Europe and Latin America (~5,800 poems each). Spain 
 
 The following plots summarizes the number of authors, poems, and tokens per region, country, and hispanic countries only.
 
-[plots]
+[nauthors per region.pdf](https://github.com/melanchthon19/spanish-poems-dataset/files/11314389/nauthors.per.region.pdf)
+
 
 # Libraries
 
