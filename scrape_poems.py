@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import os
+from os.path import isdir, isfile, join
+import sys
 import re
 import time
 import pandas as pd
@@ -63,45 +65,95 @@ def scrape_author_index(index, output):
     df = df.drop(['index'], axis=1)
     df.to_csv(output, index=False)
 
-def scrape_poems(poems, output):
+def scrape_poems(poems, log):
+    if not isdir('corpus'): os.mkdir('corpus')
+
     df = pd.read_csv(poems)
     print(df.head())
 
-    for i in df.index:
-        print(i)
+    for i in df.index:   
+        folder = join('corpus', df.loc[i, 'name'])
+        if not isdir(folder): os.mkdir(folder)
+
+        title = re.sub(r'[^ a-záéíóúüñA-Z0-9]', '', df.loc[i, 'title'])
+        output = join(folder, title + '.txt')
+        if isfile(output): continue
+        
+        print(i, output)
+
         try: 
             site = requests.get(df.loc[i, 'link'])
             soup = BeautifulSoup(site.text, 'html.parser')
             poem = soup.find('table', class_='table-center')
             stanzas = poem.find_all('p')
             
-            for j, stanza in enumerate(stanzas):
-                with open(output, 'a') as file:
-                    file.write(f'{df.loc[i, "name"]},{df.loc[i, "title"]},{j+1},{repr(stanza.text)}\n')
+            for stanza in stanzas:
+                stanza = re.sub('\xa0', '', str(stanza))
+                stanza = re.split(r'<.*?>', stanza)
+                stanza = [t.strip() for t in stanza if t]
+                stanza = '\n'.join([st for st in stanza])
 
+                with open(output, 'a') as file:
+                    file.write(f'{stanza}\n\n')
+        
         except Exception as e:
-            with open('log.txt', 'a') as file:
+            with open(log, 'a') as file:
                 file.write(f'Error with {df.iloc[i]}\n{e}\n\n')
             print(f'Error with {df.iloc[i]}\n{e}\n\n')
+        
         time.sleep(2)
+        #if i == 5: break
+
+def scrape_html(author, title, link):
+    if not isdir('corpus'): os.mkdir('corpus')
+
+    folder = join('corpus', author)
+    if not isdir(folder): os.mkdir(folder)
+
+    title = re.sub(r'[^ a-záéíóúüñA-Z0-9]', '', title)
+    output = join(folder, title + '.txt')
+    print(output)
+
+    # change code here to adjust for specific websites
+    site = requests.get(link)
+    soup = BeautifulSoup(site.text, 'html.parser')
+    poem = soup.find('table', class_='table-center')
+    stanzas = poem.find_all('td')
     
+    for stanza in stanzas:
+        stanza = re.sub('\xa0', '', str(stanza))
+        stanza = re.split(r'<.*?>', stanza)
+        stanza = [t.strip() for t in stanza if t]
+        stanza = '\n'.join([st for st in stanza])
+        stanza = re.sub(r'\n\[L\d+\]', '', stanza)
+        #print(stanza)
+        with open(output, 'a') as file:
+            file.write(f'{stanza}\n\n')
+
 
 if __name__ == '__main__':
     """
-    it scrapes ciudad seva's index and outputs a csv file ('ciudadseva.csv')
+    scrape_ciudadseva_index() scrapes ciudad seva's index and outputs a csv file ('ciudadseva.csv')
     format: name, link, country, date
     """
     #scrape_ciudadseva_index('ciudadseva.csv')
     
     """
-    it scrapes links to poems from each author and outputs a csv file ('poems.csv')
+    scrape_author_index() scrapes links to poems from each author and outputs a csv file ('poems.csv')
     format: name, title, link
     """
     #scrape_author_index('ciudadseva.csv', 'poems.csv')
 
     """
-    it scrapes each poem from each author and outputs a csv file ('corpus.csv')
-    format: name, title, stanza, text
+    scrape_poems() scrapes each poem from each author.
+    corpus folder is created: corpus --> author --> poems in txt files.
     any errors are logged to 'log.txt'
     """
-    #scrape_poems('poems.csv', 'corpus.csv')
+    #scrape_poems('poems.csv', 'log2.txt')
+
+    """
+    scrape_html() scrapes a given link and adds poems to corpus folder.
+    function should be called from command line passing author title link
+    """
+    #scrape_html(sys.argv[1], sys.argv[2], sys.argv[3])
+
